@@ -1,0 +1,226 @@
+:root {
+    --bgLowOpacity: hsl(22, 31%, 76%, .2);
+    --bgMediumOpacity: hsl(22, 31%, 76%, .5);
+    --borderRadiusBase: 10px;
+    --borderStyle: #d5bdaf double 5px;
+    --mediumMargin: 16px;
+    --primaryBgColor: #d7cec7;
+    --secondaryBgColor: #f7f7f7;
+    --primaryTextColor: black;
+    --secondaryTextColor: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: var(--secondaryBgColor);
+    display: flex;
+    font-family: Montserrat;
+    margin: 24px;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.header {
+    background-color: var(--secondaryBgColor);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: qwitcher;
+    margin: 8px;
+    padding: 0 16px 8px 16px;
+}
+
+.pageLogo-title {
+    color: var(--primaryTextColor);
+    text-decoration: none;
+}
+
+.navbar {
+    border-bottom: var(--primaryBgColor) double 5px;
+    display: grid;
+    grid-template: 1fr / repeat(2, 50%);
+}
+
+.navbar .menu-links {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+    width: 100%;
+}
+
+.navbar li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.right-menu {
+    color: var(--primaryTextColor);
+    font-size: 0.8rem;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.right-menu:hover {
+    font-weight: 700;
+    text-decoration: overline;
+    transition: font-weight 0.15s, text-decoration 0.15s;
+}
+
+.bgimage {
+    background-attachment: fixed;
+    background-image: url(/images/homepage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimage-grid {
+    display: grid;
+    grid-template: repeat(4,110px) / repeat(4, 25%);
+}
+
+.bgimage-text {
+    align-items: center;
+    background-color: var(--bgMediumOpacity);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 900;
+    grid-area: 2 / 1 / 4 / 3;
+    margin: 0;
+    padding: 16px;
+    text-align: left;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.welcome--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.welcome--container h3,
+.welcome--container p {
+    width: 50%;
+}
+
+.welcome--container h3 {
+    font-size: 4rem;
+    text-align: right;
+}
+
+.welcome--container p {
+    align-self: center;
+    text-align: left;
+}
+
+.destinations__postcards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.destinations__postcards img {
+    width: 500px;
+}
+
+.destinations__postcards img:nth-child(3) {
+    grid-area: 2 / 2 / 3 / 3;
+    margin-left: auto;
+}
+
+.postcard__description {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--primaryBgColor);
+    border-radius: 10px;
+    color: var(--secondaryTextColor);
+    display: flex;
+    padding: 16px;
+    padding-right: 0;
+    justify-content: end;
+    margin-top: var(--mediumMargin);
+    margin-bottom: var(--mediumMargin);
+}
+
+.logo2 {
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 678px) {
+    h1 {
+        margin: 16px;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .welcome--container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .welcome--container h3,
+    .welcome--container p {
+        margin: 16px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .welcome--container h3 {
+        font-size: 3rem;
+        order: 1;
+    }
+
+    .welcome--container p {
+        order: 2;
+    }
+
+    .destinations__title {
+        text-align: center;
+    }
+
+    .destinations__postcards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .destinations__postcards img {
+        justify-self: center;
+        width: 300px;
+    }
+
+    .destinations__postcards img:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .destinations__postcards img:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+}

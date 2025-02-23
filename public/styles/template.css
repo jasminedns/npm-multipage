@@ -1,0 +1,93 @@
+.page__intro--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.page__intro--container h3,
+.page__intro--container p {
+    padding: 16px;
+    width: 50%;
+}
+
+.page__intro--container h3 {
+    font-size: 3.5rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.page__intro--container p {
+    align-self: center;
+    text-align: right;
+}
+
+.bg__picture {
+    align-items: center;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    height: 500px;
+    width: 100%;
+}
+
+.city-guide {
+    background-image: url(/images/bg__pic1.jpg);
+}
+
+.nature-spots {
+    background-image: url(/images/bg__pic2);
+}
+
+.bg__picture h4 {
+    border: solid 1.5px #fff;
+    text-transform: uppercase;
+    padding: 24px;
+}
+
+.bg__picture a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bg__picture a:hover {
+    text-decoration: overline;
+}
+
+.hidden {
+    display: none;
+}
+
+.city-guide--container,
+.nature-spots--container {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .page__intro--container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .page__intro--container h3,
+    .page__intro--container p {
+        margin: 16px;
+        width: 90%;
+    }
+
+    .page__intro--container h3 {
+        align-self: center;
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .page__intro--container p {
+        text-align: center;
+    }
+}

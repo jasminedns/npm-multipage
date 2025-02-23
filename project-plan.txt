@@ -1,0 +1,56 @@
+Home Page
+    - Welcome Message: Brief introduction to the travel guide.
+    - Featured Destinations: Showcase some popular destinations with images and short descriptions.
+    - Navigation: Links to top-level pages.
+
+Top-Level Pages
+    - Destinations
+        Sub-Pages:
+        - City Guides: Information about various cities (e.g., Paris, Tokyo).
+        - Nature Spots: Information about natural attractions (e.g., Grand Canyon, Mount Fuji).
+
+    - Travel Tips
+        Sub-Pages:
+        - Packing Tips: What to pack for different types of trips.
+        - Safety Tips: Advice on staying safe while traveling.
+
+Requirements
+    - DONE A home page and routes to at least 2 other top level pages.
+    - The 2 top level pages should each have at least 2 routes to sub pages
+
+    To achieve a Godkänt grade:
+        - DONE At least 2 routers
+        - DONE Routers should be imported into index.js
+        - DONE Set a view engine
+        - Use of templates:
+            - All pages should be templates
+            - Templates should be practical
+            - Sub pages for each main page should use the same template 
+        - Partials for all common elements
+        - Any reused elements should be partials
+        - Data passed to templates using the locals object
+        - At least one img element
+        - At least one background-image element
+        - Static files stored in appropriate location
+        - Only the home page is allowed hardcoded content.
+
+    To achieve a Välgodkänt grade:
+        - Data to be stored and imported from an appropriate directory
+        - Data passed to templates correctly
+        - Variables tested before they are used
+        - Conditional Logic
+        - File Organization
+        - Consistent and correct coding style.
+        -Correct handling of environmental variables such as port number.
+
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var path = window.location.pathname;
+  
+      if (path === '/destinations/city-guide') {
+        document.querySelector('.destinations--container').classList.remove('hidden');
+      } else if (path === '/destinations/nature-spots') {
+        document.querySelector('.nature-spots--container').classList.remove('hidden');
+      }
+    });
+</script>
