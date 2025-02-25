@@ -2,11 +2,15 @@ import express from "express";
 import destinationRouter from "./routes/destinations.js";
 import travelTips from "./routes/travel-tips.js"
 import * as path from "path";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-const PORT = 3003;
+const PORT = process.env.PORT;
 const __dirName = path.resolve();
 
+app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirName, "public")));
 
