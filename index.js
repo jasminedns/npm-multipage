@@ -8,12 +8,12 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
-const __dirName = path.resolve();
+const __dirname = path.resolve();
 
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirName, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
     res.render("pages/index.ejs", {
