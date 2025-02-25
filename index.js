@@ -12,8 +12,8 @@ const __dirName = path.resolve();
 
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirName, "public")));
 
+app.use(express.static(path.join(__dirName, "public")));
 
 app.get("/", (req, res) => {
     res.render("pages/index.ejs", {
