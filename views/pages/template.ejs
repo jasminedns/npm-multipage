@@ -5,48 +5,84 @@
         <h3><%= pageTitle %></h3>
         <p><%= pageDescription %></p>
     </div>
-    <div class="city-guide--container hidden">
-        <% if(locals.cityGuideArray) { %>
-            <% cityGuideArray.forEach(city => { %>
-                <div class="city-guide__details">
-                    <h4><%= city.name %>, <%= city.location %></h4>
-                    <p><%= city.description %></p>
+
+    <% if (locals.destinations || locals.tips) { %>
+        <% if(locals.destinations) { %>
+            <div class="destination__div--container">
+                <div class="bg__picture">
+                    <h4><a href="/destinations/city-guide">City Guide</a></h4>
                 </div>
-            <% }) %>
-        <% } %>
-    </div>
-    <div class="city-guide bg__picture">
-        <h4><a href="/destinations/city-guide">City Guide</a></h4>
-    </div>
-    <div class="nature-spots--container hidden">
-        <% if(locals.natureSpotsArray) { %>
-            <% natureSpotsArray.forEach(destination => { %>
-                <div class="nature-spots__details">
-                    <h4><%= destination.name %>, <%= destination.location %></h4>
-                    <p><%= destination.description %></p>
+                <div class="bg__picture">
+                    <h4><a href="/destinations/nature-spots">Nature Spots</a></h4>
                 </div>
-            <% }) %>
+            </div>
+        <% } else { %>
+            <div class="tips__div--container">
+                <div class="bg__picture">
+                    <h4><a href="/travel-tips/packing-tips">Packing</a></h4>
+                </div>
+                <div class="bg__picture">
+                    <h4><a href="/travel-tips/safety-tips">Safety</a></h4>
+                </div>
+            </div>
         <% } %>
-    </div>
-    <div class="nature-spots bg__picture">
-        <h4><a href="/destinations/nature-spots">Nature Spots</a></h4>
-    </div>
-    
-    
+    <% } %>
+
+    <% if(locals.cityGuideArray || locals.natureSpotsArray || locals.packingArray || locals.safetyArray) { %>
+            <% if(locals.cityGuideArray) { %>
+                <div class="city-guide--container">
+                    <% cityGuideArray.forEach(item => { %>
+                        <div class="details">
+                            <h4><%= item.name %>, <%= item.location %></h4>
+                            <p><%= item.description %></p>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="bg__picture">
+                    <h4><a href="/destinations/nature-spots">Nature Spots</a></h4>
+                </div>
+
+            <% } else if (locals.natureSpotsArray) { %>
+                <div class="nature-spots--container">
+                    <% natureSpotsArray.forEach(item => { %>
+                        <div class="details">
+                            <h4><%= item.name %>, <%= item.location %></h4>
+                            <p><%= item.description %></p>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="bg__picture">
+                    <h4><a href="/destinations/city-guide">City Guide</a></h4>
+                </div>
+
+            <% } else if (locals.packingArray) { %>
+                <div class="packing--container">
+                    <% packingArray.forEach(item => { %>
+                        <div class="details">
+                            <h4><%= item.title %></h4>
+                            <p><%= item.description %></p>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="bg__picture">
+                    <h4><a href="/travel-tips/safety-tips">Safety</a></h4>
+                </div>
+
+            <% } else { %>
+                <div class="safety--container">
+                    <% safetyArray.forEach(item => { %>
+                        <div class="details">
+                            <h5><%= item.title %></h5>
+                            <p><%= item.description %></p>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="bg__picture">
+                    <h4><a href="/travel-tips/packing-tips">Packing</a></h4>
+                </div>
+            <% } %>
+    <% } %>
+
 </main>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var path = window.location.pathname;
-  
-      if (path === '/destinations/city-guide') {
-        document.querySelector('.city-guide--container').classList.remove('hidden');
-        document.querySelector('.city-guide').classList.add('hidden');
-      } else if (path === '/destinations/nature-spots') {
-        document.querySelector('.nature-spots--container').classList.remove('hidden');
-        document.querySelector('.nature-spots').classList.add('hidden');
-      }
-    });
-</script>
-
 <%- include("../partials/footer.ejs") %>
+

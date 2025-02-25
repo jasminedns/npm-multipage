@@ -36,7 +36,6 @@ body {
 
 h1 {
     font-size: 4rem;
-    font-family: qwitcher;
     margin: 8px;
     padding: 0 16px 8px 16px;
 }
@@ -81,7 +80,6 @@ h1 {
 
 .bgimage {
     background-attachment: fixed;
-    background-image: url(/images/homepage.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -167,7 +165,13 @@ h1 {
     margin-right: 8px;
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 1100px) {
+    .destinations__postcards img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 767px) {
     h1 {
         margin: 16px;
         padding: 8px;

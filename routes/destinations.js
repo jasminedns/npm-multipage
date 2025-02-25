@@ -7,7 +7,8 @@ destinationRouter.get("/", (req, res) => {
     res.render("pages/template", {
         headTitle: "Destinations",
         pageTitle: "Destinations",
-        pageDescription: "Discover the magic of travel with our curated selection of stunning destinations. From ancient ruins that whisper stories of the past to serene temples offering a haven of tranquility, each destination provides a unique and unforgettable experience. Picture yourself basking in the sun on picturesque islands with iconic white-washed buildings and azure waters. Whether you're seeking adventure, relaxation, or cultural enrichment, our travel guide provides all the inspiration you need to embark on your next journey. Let the world be your oyster, and start exploring today!"
+        pageDescription: "Discover the magic of travel with our curated selection of stunning destinations. From ancient ruins that whisper stories of the past to serene temples offering a haven of tranquility, each destination provides a unique and unforgettable experience. Picture yourself basking in the sun on picturesque islands with iconic white-washed buildings and azure waters. Whether you're seeking adventure, relaxation, or cultural enrichment, our travel guide provides all the inspiration you need to embark on your next journey. Let the world be your oyster, and start exploring today!",
+        destinations: "subPage"
     })
 })
 

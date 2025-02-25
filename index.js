@@ -13,7 +13,11 @@ app.use(express.static(path.join(__dirName, "public")));
 
 app.get("/", (req, res) => {
     res.render("pages/index.ejs", {
-        headTitle: "home"
+        headTitle: "home",
+        backgroundImage: "/images/background/homepage.jpg",
+        romeImage: "/images/rome.jpg",
+        kyotoImage: "/images/kyoto.jpg",
+        santoriniImage: "/images/santorini.jpg",
     })
 })
 

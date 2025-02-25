@@ -16,28 +16,28 @@ Top-Level Pages
 
 Requirements
     - DONE A home page and routes to at least 2 other top level pages.
-    - The 2 top level pages should each have at least 2 routes to sub pages
+    - DONE The 2 top level pages should each have at least 2 routes to sub pages
 
     To achieve a Godkänt grade:
         - DONE At least 2 routers
         - DONE Routers should be imported into index.js
         - DONE Set a view engine
-        - Use of templates:
+        - DONE Use of templates:
             - All pages should be templates
             - Templates should be practical
             - Sub pages for each main page should use the same template 
-        - Partials for all common elements
-        - Any reused elements should be partials
-        - Data passed to templates using the locals object
-        - At least one img element
+        - DONE Partials for all common elements
+        - DONE Any reused elements should be partials
+        - DONE Data passed to templates using the locals object
+        - DONE At least one img element
         - At least one background-image element
-        - Static files stored in appropriate location
-        - Only the home page is allowed hardcoded content.
+        - DONE Static files stored in appropriate location
+        - DONE Only the home page is allowed hardcoded content.
 
     To achieve a Välgodkänt grade:
-        - Data to be stored and imported from an appropriate directory
-        - Data passed to templates correctly
-        - Variables tested before they are used
+        - DONE Data to be stored and imported from an appropriate directory
+        - DONE Data passed to templates correctly
+        - DONE Variables tested before they are used
         - Conditional Logic
         - File Organization
         - Consistent and correct coding style.
